@@ -1,0 +1,16 @@
+{
+  "minVersion": "1.0.1",
+  "latestVersion": "1.0.1",
+  "forceUpdate": false,
+  "updateUrl": "https://apps.apple.com/app/6760490572",
+  "title": {
+    "tr": "Uygulama Güncellemesi Gerekli",
+    "en": "Update Required",
+    "ar": "تحديث التطبيق مطلوب"
+  },
+  "message": {
+    "tr": "Nöbetçi eczanelere kesintisiz ve doğru şekilde erişebilmek için lütfen uygulamanızı en son sürüme güncelleyin.",
+    "en": "Please update your app to the latest version for uninterrupted and accurate access to on-duty pharmacies.",
+    "ar": "يرجى تحديث تطبيقك إلى أحدث إصدار للوصول دون انقطاع وبدقة إلى صيدليات النوبة."
+  }
+}
