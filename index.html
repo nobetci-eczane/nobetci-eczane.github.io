@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nöbetçi Eczane - Size En Yakın Nöbetçi Eczaneyi Hemen Bulun</title>
+    <meta name="description" content="Türkiye genelinde tüm il ve ilçelerdeki nöbetçi eczaneleri anında bulun. Yol tarifi alın ve tek tıkla arayın.">
+    <style>
+        :root {
+            --primary: #ff3b30;
+            --secondary: #1a1a2e;
+            --text: #333;
+            --light: #f8f9fa;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+        body { color: var(--text); line-height: 1.6; overflow-x: hidden; }
+        
+        /* Navbar */
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 10%; background: #fff; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+        .logo { font-size: 24px; font-weight: 900; color: var(--primary); display: flex; align-items: center; gap: 10px; }
+        .logo-icon { width: 32px; height: 32px; background: var(--primary); color: #fff; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 20px; }
+        nav ul { display: flex; list-style: none; gap: 30px; }
+        nav li a { text-decoration: none; color: var(--secondary); font-weight: 600; transition: 0.3s; }
+        nav li a:hover { color: var(--primary); }
+
+        /* Hero */
+        .hero { display: flex; align-items: center; padding: 80px 10%; background: linear-gradient(135deg, #fff 0%, #fff5f5 100%); min-height: 80vh; gap: 50px; }
+        .hero-content { flex: 1; }
+        .hero-content h1 { font-size: 56px; line-height: 1.1; margin-bottom: 24px; color: var(--secondary); }
+        .hero-content p { font-size: 20px; color: #666; margin-bottom: 40px; }
+        .btn { display: inline-block; padding: 18px 36px; border-radius: 50px; font-weight: 700; text-decoration: none; transition: 0.3s; cursor: pointer; border: none; }
+        .btn-primary { background: var(--primary); color: #fff; box-shadow: 0 10px 20px rgba(255, 59, 48, 0.3); }
+        .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 15px 30px rgba(255, 59, 48, 0.4); }
+        .hero-image { flex: 1; position: relative; }
+        .hero-image img { width: 100%; border-radius: 30px; box-shadow: 0 30px 60px rgba(0,0,0,0.1); }
+
+        /* Features */
+        .features { padding: 100px 10%; text-align: center; background: #fff; }
+        .section-title { font-size: 40px; margin-bottom: 60px; color: var(--secondary); }
+        .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
+        .feature-card { padding: 40px; border-radius: 24px; background: var(--light); border: 1px solid #eee; transition: 0.3s; }
+        .feature-card:hover { transform: translateY(-10px); background: #fff; box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
+        .feature-icon { font-size: 40px; margin-bottom: 20px; display: block; }
+        .feature-card h3 { margin-bottom: 15px; font-size: 22px; color: var(--secondary); }
+
+        /* Footer */
+        footer { background: var(--secondary); color: #fff; padding: 80px 10% 40px; }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 50px; margin-bottom: 50px; }
+        .footer-col h4 { font-size: 18px; margin-bottom: 20px; opacity: 0.9; }
+        .footer-col ul { list-style: none; }
+        .footer-col li { margin-bottom: 12px; }
+        .footer-col a { color: #ccc; text-decoration: none; transition: 0.3s; font-size: 15px; }
+        .footer-col a:hover { color: #fff; }
+        .copyright { text-align: center; padding-top: 40px; border-top: 1px solid rgba(255,255,255,0.1); color: #888; font-size: 14px; }
+
+        @media (max-width: 968px) {
+            .hero { flex-direction: column; text-align: center; padding: 100px 5% 40px; }
+            .hero-content h1 { font-size: 40px; }
+            nav { padding: 20px 5%; }
+            nav ul { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">
+            <div class="logo-icon">E</div>
+            Nöbetçi Eczane
+        </div>
+        <ul>
+            <li><a href="#ozellikler">Özellikler</a></li>
+            <li><a href="privacy.html">Gizlilik Politikası</a></li>
+            <li><a href="terms.html">Kullanım Koşulları</a></li>
+        </ul>
+        <a href="#indir" class="btn btn-primary" style="padding: 10px 25px;">İndir</a>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Sağlığınız İçin<br><span style="color: var(--primary);">Nöbetçi Eczane</span> Anında Cebinizde.</h1>
+            <p>Gece yarısı, pazar günü veya bayramda... Türkiye'nin neresinde olursanız olun, size en yakın nöbetçi eczaneyi saniyeler içinde bulun.</p>
+            <div id="indir">
+                <a href="#" class="btn btn-primary">App Store'dan İndir</a>
+                <p style="margin-top: 15px; font-size: 14px; color: #888;">Android sürümü yakında Google Play'de.</p>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="app_landing_hero.png" alt="Nöbetçi Eczane Uygulaması">
+        </div>
+    </header>
+
+    <section id="ozellikler" class="features">
+        <h2 class="section-title">Neden Nöbetçi Eczane Uygulaması?</h2>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <span class="feature-icon">📍</span>
+                <h3>Konum Bazlı Filtreleme</h3>
+                <p>GPS teknolojisi ile etrafınızdaki en yakın eczaneleri anında listeleyin veya harita üzerinde görün.</p>
+            </div>
+            <div class="feature-card">
+                <span class="feature-icon">🚗</span>
+                <h3>Hızlı Yol Tarifi</h3>
+                <p>Apple Haritalar veya Google Haritalar üzerinden tek tıkla en hızlı rotayı oluşturun.</p>
+            </div>
+            <div class="feature-card">
+                <span class="feature-icon">📞</span>
+                <h3>Tek Tıkla Arama</h3>
+                <p>Numara girmekle uğraşmayın. Uygulama üzerinden eczaneyi doğrudan arayıp stok veya adres teyidi alın.</p>
+            </div>
+        </div>
+    </section>
+
+    <section style="background: var(--light); padding: 100px 10%; text-align: center;">
+        <h2 class="section-title">Her Zaman Güncel, Her Zaman Yanınızda</h2>
+        <img src="app_features_mockup.png" alt="Uygulama Ekranları" style="max-width: 800px; width: 100%; border-radius: 20px; box-shadow: 0 40px 100px rgba(0,0,0,0.1);">
+    </section>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col" style="grid-column: span 2;">
+                <div class="logo" style="color: #fff; margin-bottom: 20px;">
+                    <div class="logo-icon">E</div>
+                    Nöbetçi Eczane
+                </div>
+                <p style="color: #ccc; max-width: 300px;">Türkiye'nin en hızlı ve en güvenilir nöbetçi eczane takip uygulaması.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Sayfalar</h4>
+                <ul>
+                    <li><a href="#">Ana Sayfa</a></li>
+                    <li><a href="#ozellikler">Özellikler</a></li>
+                    <li><a href="privacy.html">Gizlilik Politikası</a></li>
+                    <li><a href="terms.html">Kullanım Koşulları</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>İletişim</h4>
+                <ul>
+                    <li><a href="mailto:contact@nobetcieczane.app">contact@nobetcieczane.app</a></li>
+                    <li><a href="https://nobetci-eczane.github.io">nobetci-eczane.github.io</a></li>
+                </ul>
+            </div>
+        </div>
+        <p class="copyright">&copy; 2026 Nöbetçi Eczane. Tüm hakları saklıdır.</p>
+    </footer>
+
+</body>
+</html>
