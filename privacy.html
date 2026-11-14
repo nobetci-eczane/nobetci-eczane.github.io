@@ -1,33 +1,178 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="tr" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gizlilik Politikası - Nöbetçi Eczane</title>
+    <link rel="icon" type="image/png" href="app_icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
     <style>
-        body { font-family: sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 40px auto; padding: 20px; }
-        h1 { color: #ff3b30; }
-        h2 { margin-top: 30px; color: #1a1a2e; }
-        .back { display: inline-block; margin-bottom: 20px; text-decoration: none; color: #666; }
+        :root {
+            --bg-base: #0c0c11;
+            --bg-card: rgba(28, 28, 30, 0.72);
+            --border-glass: rgba(255, 255, 255, 0.12);
+            --brand-red: #e51c24;
+            --text-main: #ffffff;
+            --text-muted: rgba(255, 255, 255, 0.7);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', system-ui, sans-serif; }
+        [dir="rtl"] * { font-family: 'Tajawal', system-ui, sans-serif; }
+        body {
+            background-color: var(--bg-base);
+            color: var(--text-main);
+            line-height: 1.7;
+            padding: 40px 20px 80px;
+        }
+        .container {
+            max-width: 820px;
+            margin: 0 auto;
+            background: var(--bg-card);
+            border: 1px solid var(--border-glass);
+            border-radius: 28px;
+            padding: 46px 40px;
+            backdrop-filter: blur(24px);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+        }
+        .header-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 28px;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+        .back-link {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: color 0.2s;
+        }
+        .back-link:hover { color: #fff; }
+        .lang-switch {
+            display: flex;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid var(--border-glass);
+            border-radius: 20px;
+            padding: 3px;
+            gap: 2px;
+        }
+        .lang-btn {
+            background: transparent;
+            border: none;
+            color: var(--text-muted);
+            font-weight: 700;
+            font-size: 12px;
+            padding: 5px 10px;
+            border-radius: 14px;
+            cursor: pointer;
+        }
+        .lang-btn.active {
+            background: var(--brand-red);
+            color: #fff;
+        }
+        h1 { font-size: 32px; font-weight: 800; color: #fff; margin-bottom: 8px; }
+        .update-date { font-size: 13px; color: var(--text-muted); margin-bottom: 26px; }
+        h2 { font-size: 19px; font-weight: 700; margin-top: 28px; margin-bottom: 10px; color: #ff525a; }
+        p { color: var(--text-muted); margin-bottom: 14px; font-size: 15px; }
+        a { color: #5ac8fa; text-decoration: none; }
+        a:hover { text-decoration: underline; }
     </style>
 </head>
 <body>
-    <a href="index.html" class="back">&larr; Ana Sayfa</a>
-    <h1>Gizlilik Politikası</h1>
-    <p>Son Güncelleme: 12 Mart 2026</p>
+    <div class="container">
+        <div class="header-row">
+            <a href="index.html" class="back-link" id="backLink">&larr; Ana Sayfa</a>
+            <div class="lang-switch">
+                <button class="lang-btn active" onclick="setLang('tr')">TR</button>
+                <button class="lang-btn" onclick="setLang('en')">EN</button>
+                <button class="lang-btn" onclick="setLang('ar')">عربي</button>
+            </div>
+        </div>
 
-    <p>Nöbetçi Eczane uygulaması olarak gizliliğinize önem veriyoruz. Bu politika, uygulamamızı kullandığınızda hangi verileri nasıl işlediğimizi açıklar.</p>
+        <div id="contentTr">
+            <h1>Gizlilik Politikası</h1>
+            <p class="update-date">Son Güncelleme: 14 Kasım 2026</p>
+            <p>Nöbetçi Eczane uygulaması olarak kullanıcılarımızın gizliliğine en üst düzeyde önem veriyoruz. Bu politika, uygulamamızı kullandığınızda verilerinizin nasıl korunduğunu açıklar.</p>
+            
+            <h2>1. Toplanan Bilgiler</h2>
+            <p><strong>Konum Bilgisi:</strong> Size en yakın nöbetçi eczaneyi tespit edip mesafe hesaplayabilmek amacıyla cihazınızın GPS konum bilgisine ihtiyaç duyulur. Bu bilgi yalnızca uygulama ön plandayken cihazınızda yerel olarak işlenir; sunucularımızda kesinlikle kaydedilmez veya üçüncü şahıslara satılmaz.</p>
+            
+            <h2>2. Kişisel Veriler ve Üyelik</h2>
+            <p>Uygulamamız herhangi bir kayıt veya üyelik gerektirmez. Adınız, soyadınız, telefon numaranız veya e-posta adresiniz gibi kimlik doğrulayıcı kişisel veriler kesinlikle talep edilmez ve toplanmaz.</p>
+            
+            <h2>3. Harita ve Navigasyon</h2>
+            <p>Eczane yol tarifleri Apple Haritalar, Google Haritalar veya Yandex Navigasyon uygulamaları üzerinden sağlanır. Bu servisler kendi gizlilik sözleşmelerine tabidir.</p>
+            
+            <h2>4. İletişim</h2>
+            <p>Gizlilik politikamız ile ilgili soru ve geri bildirimleriniz için geliştiricimiz ile iletişime geçebilirsiniz: <a href="mailto:bavagir.dev@gmail.com">bavagir.dev@gmail.com</a></p>
+        </div>
 
-    <h2>1. Toplanan Bilgiler</h2>
-    <p><strong>Konum Bilgisi:</strong> Uygulama, size en yakın eczaneleri gösterebilmek için konum bilgisine ihtiyaç duyar. Bu bilgi sadece uygulama açıkken veya kullanımdayken eczane mesafelerini hesaplamak için kullanılır ve kesinlikle sunucularımızda saklanmaz veya üçüncü şahıslarla paylaşılmaz.</p>
+        <div id="contentEn" style="display:none;">
+            <h1>Privacy Policy</h1>
+            <p class="update-date">Last Updated: November 14, 2026</p>
+            <p>As the Duty Pharmacies app, we place the utmost importance on our users' privacy. This policy explains how your data is handled when using our app.</p>
+            
+            <h2>1. Collected Information</h2>
+            <p><strong>Location Data:</strong> Your device's GPS location is required solely to identify the nearest on-duty pharmacy and calculate distance. This data is processed locally on your device while the app is in use; it is never stored on external servers nor sold to third parties.</p>
+            
+            <h2>2. Personal Data & Accounts</h2>
+            <p>The app requires no account registration or login. Personal identifying data such as names, phone numbers, or email addresses are never requested or collected.</p>
+            
+            <h2>3. Third-Party Map Services</h2>
+            <p>Directions are provided directly via Apple Maps, Google Maps, or Yandex Navigation. These external services are governed by their respective privacy policies.</p>
+            
+            <h2>4. Contact</h2>
+            <p>For questions or feedback regarding our privacy policy, please contact us at: <a href="mailto:bavagir.dev@gmail.com">bavagir.dev@gmail.com</a></p>
+        </div>
 
-    <h2>2. Veri Kullanımı</h2>
-    <p>Kullanıcı verileri (konum vb.) sadece uygulamanın temel fonksiyonlarını yerine getirmesi (yakın eczane bulma) için anlık olarak işlenir. Uygulama herhangi bir üyelik sistemi gerektirmez, kişisel kimlik bilgileriniz (ad, soyad, e-posta) istenmez.</p>
+        <div id="contentAr" style="display:none;">
+            <h1>سياسة الخصوصية</h1>
+            <p class="update-date">آخر تحديث: 14 نوفمبر 2026</p>
+            <p>في تطبيق صيدليات النوبة، نولي أهمية قصوى لخصوصية مستخدمينا. توضح هذه السياسة كيفية حماية بياناتك عند استخدام التطبيق.</p>
+            
+            <h2>1. المعلومات المجمعة</h2>
+            <p><strong>بيانات الموقع:</strong> يتم طلب إذن الموقع الجغرافي (GPS) حصرياً لتحديد أقرب صيدلية نوبة وحساب المسافة بدقة. تتم معالجة هذه البيانات محلياً داخل جهازك أثناء استخدام التطبيق ولا يتم تخزينها أبداً على خوادم أو مشاركتها مع أطراف ثالثة.</p>
+            
+            <h2>2. البيانات الشخصية والحسابات</h2>
+            <p>لا يتطلب التطبيق أي تسجيل حساب أو تسجيل دخول. لا يتم طلب أو جمع أي معلومات تعريف شخصية مثل الاسم أو رقم الهاتف أو البريد الإلكتروني.</p>
+            
+            <h2>3. خدمات الخرائط والملاحة</h2>
+            <p>يتم توفير مسارات التوجيه مباشرة عبر خرائط Apple أو خرائط Google أو Yandex. تخضع هذه الخدمات لسياسات الخصوصية الخاصة بمقدميها.</p>
+            
+            <h2>4. التواصل والدعم</h2>
+            <p>لأية أسئلة أو استفسارات تتعلق بسياسة الخصوصية، يرجى مراسلتنا على: <a href="mailto:bavagir.dev@gmail.com">bavagir.dev@gmail.com</a></p>
+        </div>
+    </div>
 
-    <h2>3. Üçüncü Taraf Servisler</h2>
-    <p>Uygulama, eczane verilerini sağlamak için CollectAPI ve harita gösterimi için Google Maps/Apple Maps servislerini kullanabilir. Bu servislerin kendi gizlilik politikaları geçerlidir.</p>
+    <script>
+        function setLang(lang) {
+            document.documentElement.lang = lang;
+            document.documentElement.dir = (lang === 'ar') ? 'rtl' : 'ltr';
+            
+            document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+            const activeBtn = Array.from(document.querySelectorAll('.lang-btn')).find(b => b.textContent.trim().toLowerCase() === (lang === 'ar' ? 'عربي' : lang));
+            if (activeBtn) activeBtn.classList.add('active');
 
-    <h2>4. İletişim</h2>
-    <p>Gizlilik politikamız hakkında sorularınız ve önerileriniz için bize ulaşabilirsiniz: <a href="mailto:bavagir.dev@gmail.com">bavagir.dev@gmail.com</a></p>
+            document.getElementById('contentTr').style.display = (lang === 'tr') ? 'block' : 'none';
+            document.getElementById('contentEn').style.display = (lang === 'en') ? 'block' : 'none';
+            document.getElementById('contentAr').style.display = (lang === 'ar') ? 'block' : 'none';
+
+            const backText = lang === 'ar' ? 'الرئيسية &rarr;' : (lang === 'en' ? '&larr; Home' : '&larr; Ana Sayfa');
+            document.getElementById('backLink').innerHTML = backText;
+
+            localStorage.setItem('nobetci_site_lang', lang);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const saved = localStorage.getItem('nobetci_site_lang') || 'tr';
+            setLang(saved);
+        });
+    </script>
 </body>
 </html>
